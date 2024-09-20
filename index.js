@@ -1,5 +1,5 @@
 const message = (name) => {
-    console.log(`Hello ${name}`);
+  console.log(`Hello ${name}`);
 };
 
 message("JavaScript");
