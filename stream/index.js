@@ -14,7 +14,9 @@ const writableStream = fs.createWriteStream("./stream/output.txt");
 
 readableStream.on("readable", () => {
   try {
-    process.stdout.write(`${readableStream.read()}\n`);
+    const data = `${readableStream.read()}\n`;
+    process.stdout.write(data);
+    writableStream.write(data);
   } catch (error) {
     // catch the error when the chunk cannot be read.
   }
